@@ -27,7 +27,6 @@ router.put('/state/:state/city/:city', async (req, res) => {
   const state = req.params.state.toLowerCase();
   const city = req.params.city.toLowerCase();
   const population = parseInt(req.body, 10);
-  console.log(req.body);
 
   if (isNaN(population) || typeof population !== 'number') {
     return res

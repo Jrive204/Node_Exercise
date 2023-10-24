@@ -1,18 +1,67 @@
+# Trazi_Node_Exercise
+
 ## Installing Dependencies
 
 Navigate to the specific project folder you're interested in (`express`, `fastify`, or `node-vanilla`).
 - Once inside, execute the command:
-
   ```bash
   npm install
-
 - After setting up your PostgreSQL database, you can use migrations to structure it for the project.
 - Use the following command to run the migration script, which will create the required table:
-
   ```bash
   npm run migrate:up
+## Project Folder Structure
 
-# API Performance Benchmarking
+Both `fastify`, `express`, and `vanilla-node` are structured identically.
+
+```bash
+fastify (or express/vanilla-node)
+│
+├── api
+│   ├── api-routes.js
+│   ├── routes
+│   │   └── population
+│   └── server.js
+│
+├── data
+│   ├── dbConfig.js
+│   └── migrations
+│       └── 001-city_populations.js
+│
+├── index.js
+├── migrate.js
+├── node_modules
+└── package.json
+```
+## Key Components:
+
+1. **index.js**: This is the entry point of the application and is triggered when `npm start` is executed. It initializes the server using configurations defined in the `server.js` inside the `api` directory.
+
+2. **api**: This directory hosts the core components of the API.
+
+    - **api-routes.js**: It serves as a central place for routing, giving a bird's-eye view of all available routes. An example is shown below:
+
+    ```javascript
+    const express = require('express');
+    const populationRoutes = require('./routes/population/population-route');
+
+    const router = express.Router();
+
+    router.use('/population', populationRoutes);
+
+    module.exports = router;
+    ```
+
+    - **routes**: This is designed to be modular, allowing for easy addition of new route categories as the project grows. Currently, it houses the `population` directory, which deals with routes related to city populations.
+
+3. **data**: This directory is dedicated to database operations.
+    - **dbConfig.js**: It's responsible for establishing and configuring the database connection.
+    - **migrations**: This houses scripts defining the structure of the database tables. For instance, `001-city_populations.js` creates the `city_populations` table.
+
+
+The project layout is crafted for scalability, ensuring that as the project grows, managing routes and other components remains straightforward.
+
+## API Performance Benchmarking
 
 In my efforts to assess the performance of my API, I utilized ApacheBench for benchmarking. The focus was on using my API endpoint to fetch population data for specific cities in Florida. Here are my findings:
 
