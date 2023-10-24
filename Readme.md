@@ -1,13 +1,13 @@
 # API Performance Benchmarking
 
-In our efforts to assess the performance of our API, we utilized ApacheBench for benchmarking. The focus was on the API endpoint that fetches population data for specific cities in Florida. Here are our findings:
+In my efforts to assess the performance of my API, I utilized ApacheBench for benchmarking. The focus was on using my API endpoint to fetch population data for specific cities in Florida. Here are my findings:
 
 ## Test Configuration:
 - **Tool**: ApacheBench, Version 2.3
 - **Server**: Localhost (127.0.0.1) on port 5555
 - **Node**: 18.16.0
 - **fastify**: 4.24.3
-- **Node**: 4.18.2
+- **express**: 4.18.2
 
 ## Fastify API Benchmarking Results:
 
@@ -54,7 +54,7 @@ In our efforts to assess the performance of our API, we utilized ApacheBench for
 - **Longest request**: 39 ms
 
 ## Key Observations for Fastify:
-- At a concurrency level of 500, the cities showed average request times of approximately 172-177 ms. For a concurrency level of 100, the average times were roughly 32-34 ms.
+- At a concurrency level of 500, the cities showed average request times of approximately 172-177 ms. The average times for a concurrency level of 100 were roughly 32-34 ms.
 - Throughput (requests per second) was consistently high, with Orlando having the peak performance at 2904.44 requests per second at a concurrency of 500.
 - All tests reported zero failed requests, emphasizing robustness under varying loads.
 
@@ -103,9 +103,9 @@ In our efforts to assess the performance of our API, we utilized ApacheBench for
 - **Longest request**: 51 ms
 
 ## Key Observations for Vanilla Node.js:
-- All cities tested consistently returned results with an average time of around 196-198 ms for the higher concurrency level of 500. For a concurrency level of 100, the average time was around 34-35 ms.
+- All cities tested consistently returned results with an average time of around 196-198 ms for the higher concurrency level of 500. The average time for a concurrency level of 100 was around 34-35 ms.
 - The throughput (requests per second) for Vanilla Node.js at a concurrency level of 500 was slightly lower than that at a concurrency level of 100.
-- There were zero failed requests across all tests, emphasizing the system's robustness under varying loads.
+- All tests had zero failed requests, emphasizing the system's robustness under varying loads.
 
 ## Express Benchmarking Results:
 
@@ -183,9 +183,9 @@ Given the performance metrics of the three platforms - Fastify, Vanilla Node.js,
 
 All three platforms exhibited zero failed requests, showcasing their reliability under stress.
 
-When assessing the frameworks based on speed, Fastify clearly demonstrated the shortest response times across both tested concurrency levels. However, it's essential to note that while speed is a critical metric, other factors like maintainability, scalability, and community support can be equally significant when choosing a platform for production.
+Fastify demonstrated the shortest response times across both tested concurrency levels when assessing the frameworks based on speed. However, it's essential to note that while speed is a critical metric, other factors like maintainability, scalability, and community support can be equally significant when choosing a platform for production.
 
-In conclusion, while all three APIs demonstrated commendable performance, Fastify stands out in terms of response speed in the given tests. Nonetheless, the best choice of framework often depends on a balance of performance and other project-specific criteria.
+In conclusion, while all three APIs demonstrated commendable performance, Fastify stands out regarding test response speed. Nonetheless, the best choice of framework often depends on a balance of performance and other project-specific criteria.
 
 
 ### Real-world Scenarios
@@ -194,4 +194,4 @@ In conclusion, while all three APIs demonstrated commendable performance, Fastif
 
 - While Vanilla Node.js might be faster in some scenarios, using a framework can significantly speed up development time, improve code organization, and enhance maintainability. The performance trade-off might be worth it in many real-world scenarios.
 
-- The benchmark provided was for specific endpoints fetching population data. The performance might vary when dealing with different endpoints, operations, or when adding more features to the API.
+- The benchmark provided was for specific endpoints fetching population data. The performance might vary when dealing with different endpoints, operations, or adding more API features.
