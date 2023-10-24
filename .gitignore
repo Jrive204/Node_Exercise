@@ -1,0 +1,9 @@
+/node-vanilla/.vscode
+/express/.vscode
+/fastify/.vscode
+/node-vanilla/node_modules
+/fastify/node_modules
+/express/node_modules
+/express/.env
+/fastify/.env
+/node-vanilla/.env
