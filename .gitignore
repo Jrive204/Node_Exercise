@@ -7,3 +7,6 @@
 /express/.env
 /fastify/.env
 /node-vanilla/.env
+/node-vanilla/package-lock.json
+/fastify/package-lock.json
+/express/package-lock.json

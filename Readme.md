@@ -35,19 +35,19 @@ In our efforts to assess the performance of our API, we utilized ApacheBench for
 ### Concurrency Level: 100, Number of Requests: 10,000
 (Test Command: `ab -c 100 -n 10000 http://127.0.0.1:5555/api/population/state/florida/city/{cityName}`)
 
-#### 1. Miami:
+### 1. Miami:
 - **Time taken for tests**: 3.295 seconds
 - **Requests per second**: 3034.90
 - **Average Time per request**: 32.950 ms
 - **Longest request**: 36 ms
 
-#### 2. Tampa:
+### 2. Tampa:
 - **Time taken for tests**: 3.361 seconds
 - **Requests per second**: 2975.30
 - **Average Time per request**: 33.610 ms
 - **Longest request**: 39 ms
 
-#### 3. Orlando:
+### 3. Orlando:
 - **Time taken for tests**: 3.265 seconds
 - **Requests per second**: 3062.79
 - **Average Time per request**: 32.650 ms
@@ -63,19 +63,19 @@ In our efforts to assess the performance of our API, we utilized ApacheBench for
 ### Concurrency Level: 500, Number of Requests: 10,000
 (Test Command: `ab -c 500 -n 10000 http://127.0.0.1:5555/api/population/state/florida/city/{cityName}`)
 
-#### 1. Miami:
+### 1. Miami:
 - **Time taken for tests**: 3.947 seconds
 - **Requests per second**: 2533.85
 - **Average Time per request**: 197.328 ms
 - **Longest request**: 298 ms
 
-#### 2. Tampa:
+### 2. Tampa:
 - **Time taken for tests**: 3.957 seconds
 - **Requests per second**: 2526.94
 - **Average Time per request**: 197.868 ms
 - **Longest request**: 288 ms
 
-#### 3. Orlando:
+### 3. Orlando:
 - **Time taken for tests**: 3.925 seconds
 - **Requests per second**: 2547.58
 - **Average Time per request**: 196.265 ms
@@ -84,19 +84,19 @@ In our efforts to assess the performance of our API, we utilized ApacheBench for
 ### Concurrency Level: 100, Number of Requests: 10,000
 (Test Command: `ab -c 100 -n 10000 http://127.0.0.1:5555/api/population/state/florida/city/{cityName}`)
 
-#### 1. Miami:
+### 1. Miami:
 - **Time taken for tests**: 3.454 seconds
 - **Requests per second**: 2895.48
 - **Average Time per request**: 34.537 ms
 - **Longest request**: 41 ms
 
-#### 2. Tampa:
+### 2. Tampa:
 - **Time taken for tests**: 3.380 seconds
 - **Requests per second**: 2958.56
 - **Average Time per request**: 33.800 ms
 - **Longest request**: 39 ms
 
-#### 3. Orlando:
+### 3. Orlando:
 - **Time taken for tests**: 3.441 seconds
 - **Requests per second**: 2905.90
 - **Average Time per request**: 34.413 ms
