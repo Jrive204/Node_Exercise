@@ -1,3 +1,17 @@
+## Installing Dependencies
+
+Navigate to the specific project folder you're interested in (`express`, `fastify`, or `node-vanilla`).
+- Once inside, execute the command:
+
+  ```bash
+  npm install
+
+- After setting up your PostgreSQL database, you can use migrations to structure it for the project.
+- Use the following command to run the migration script, which will create the required table:
+
+  ```bash
+  npm run migrate:up
+
 # API Performance Benchmarking
 
 In my efforts to assess the performance of my API, I utilized ApacheBench for benchmarking. The focus was on using my API endpoint to fetch population data for specific cities in Florida. Here are my findings:
